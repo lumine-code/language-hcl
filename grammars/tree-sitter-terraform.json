@@ -1,7 +1,7 @@
 {
   "name": "Terraform",
   "scopeName": "source.terraform",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-terraform",
   "injectionRegex": "^(terraform|tf)$",
   "fileTypes": ["tf", "tfvars"],

@@ -1,7 +1,7 @@
 {
   "name": "HCL",
   "scopeName": "source.hcl",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-hcl",
   "injectionRegex": "^(hcl)$",
   "fileTypes": ["hcl", "nomad"],
