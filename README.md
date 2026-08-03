@@ -10,6 +10,10 @@ HCL and Terraform language support.
 - **Folding**: folds blocks, objects and heredocs.
 - **Symbol navigation**: block labels, which are what a reference targets.
 
+## Installation
+
+To install `language-hcl` search for _language-hcl_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-hcl`.
+
 ## Services
 
 - **hyperlink.injection** (`^1.0.0`): consumed to highlight URLs in these files as clickable links.
