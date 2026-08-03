@@ -1,0 +1,23 @@
+{
+  "name": "HCL",
+  "scopeName": "source.hcl",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-hcl",
+  "injectionRegex": "^(hcl)$",
+  "fileTypes": ["hcl", "nomad"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    // Pin a tag or a full SHA, never a branch. Verify the ref is on the main
+    // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
+    // reporting `diverged` or a nonzero `behind` means it is not.
+    "parserSource": "github:MichaHoffmann/tree-sitter-hcl#v1.2.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-hcl/tree-sitter-hcl.wasm",
+    "highlightsQuery": "tree-sitter-hcl/highlights.scm",
+    "foldsQuery": "tree-sitter-hcl/folds.scm",
+    "indentsQuery": "tree-sitter-hcl/indents.scm",
+    "tagsQuery": "tree-sitter-hcl/tags.scm"
+  }
+}

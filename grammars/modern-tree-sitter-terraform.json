@@ -1,0 +1,26 @@
+{
+  "name": "Terraform",
+  "scopeName": "source.terraform",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-terraform",
+  "injectionRegex": "^(terraform|tf)$",
+  "fileTypes": ["tf", "tfvars"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    // Terraform is a dialect of HCL living in a subdirectory of the same
+    // upstream repository, so it is a separate parser and needs its own wasm;
+    // one shared build would install one over the other.
+    "parserSource": "github:MichaHoffmann/tree-sitter-hcl/dialects/terraform#v1.2.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-terraform/tree-sitter-terraform.wasm",
+    "highlightsQuery": [
+      "tree-sitter-terraform/highlights-hcl.scm",
+      "tree-sitter-terraform/highlights.scm"
+    ],
+    "foldsQuery": "tree-sitter-terraform/folds.scm",
+    "indentsQuery": "tree-sitter-terraform/indents.scm",
+    "tagsQuery": "tree-sitter-terraform/tags.scm"
+  }
+}
