@@ -9,7 +9,7 @@ const path = require("path");
 
 describe("HCL Tree-sitter grammar", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-hcl");
+    await lumine.packages.activatePackage("language-hcl");
   });
 
   it("tokenizes the fixture", async () => {
