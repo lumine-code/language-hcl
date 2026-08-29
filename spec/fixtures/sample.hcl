@@ -4,12 +4,17 @@
 
 variable "region" {
 # <- variable.other
+# <- keyword.control
 #        ^ string.quoted.double
 #                 ^ punctuation.definition.block.begin.bracket.curly
 
   default = 3
 # ^ variable.other.member
 #           ^ constant.numeric
+
+  lifecycle {
+# ^ support.type
+  }
 
 }
 # <- punctuation.definition.block.end.bracket.curly

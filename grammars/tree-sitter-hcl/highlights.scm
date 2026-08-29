@@ -82,15 +82,11 @@
 
 (identifier) @variable.other.hcl
 
-(body
-  (block
-    (identifier) @keyword.control.hcl))
+((identifier) @keyword.control.hcl
+  (#is? test.childOfType block))
 
-(body
-  (block
-    (body
-      (block
-        (identifier) @support.type.hcl))))
+((identifier) @support.type.hcl
+  (#is? test.typeAt "parent.parent.parent block"))
 
 (function_call
   (identifier) @entity.name.function.hcl)

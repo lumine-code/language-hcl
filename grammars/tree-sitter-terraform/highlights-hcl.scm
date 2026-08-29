@@ -87,15 +87,11 @@
 
 (identifier) @variable.other.terraform
 
-(body
-  (block
-    (identifier) @keyword.control.terraform))
+((identifier) @keyword.control.terraform
+  (#is? test.childOfType block))
 
-(body
-  (block
-    (body
-      (block
-        (identifier) @support.type.terraform))))
+((identifier) @support.type.terraform
+  (#is? test.typeAt "parent.parent.parent block"))
 
 (function_call
   (identifier) @entity.name.function.terraform)
