@@ -3,7 +3,7 @@
   "scopeName": "source.terraform",
   "type": "tree-sitter",
   "parser": "tree-sitter-terraform",
-  "injectionRegex": "^(terraform|tf)$",
+  "injectionNames": ["terraform", "tf"],
   "fileTypes": ["tf", "tfvars"],
   "comments": {
     "start": "# "
@@ -14,13 +14,10 @@
     // one shared build would install one over the other.
     "parserSource": "github:MichaHoffmann/tree-sitter-hcl/dialects/terraform#v1.2.0",
     "wasmBuildTool": "tree-sitter-cli#v0.26.13",
-    "grammar": "tree-sitter-terraform/tree-sitter-terraform.wasm",
-    "highlightsQuery": [
-      "tree-sitter-terraform/highlights-hcl.scm",
-      "tree-sitter-terraform/highlights.scm"
-    ],
-    "foldsQuery": "tree-sitter-terraform/folds.scm",
-    "indentsQuery": "tree-sitter-terraform/indents.scm",
-    "tagsQuery": "tree-sitter-terraform/tags.scm"
+    "grammar": "terraform.wasm",
+    "highlightsQuery": ["terraform-hcl-highlights.scm", "terraform-highlights.scm"],
+    "foldsQuery": "terraform-folds.scm",
+    "indentsQuery": "terraform-indents.scm",
+    "tagsQuery": "terraform-tags.scm"
   }
 }

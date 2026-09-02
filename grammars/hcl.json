@@ -3,7 +3,7 @@
   "scopeName": "source.hcl",
   "type": "tree-sitter",
   "parser": "tree-sitter-hcl",
-  "injectionRegex": "^(hcl)$",
+  "injectionNames": ["hcl"],
   "fileTypes": ["hcl", "nomad"],
   "comments": {
     "start": "# "
@@ -14,10 +14,10 @@
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:MichaHoffmann/tree-sitter-hcl#v1.2.0",
     "wasmBuildTool": "tree-sitter-cli#v0.26.13",
-    "grammar": "tree-sitter-hcl/tree-sitter-hcl.wasm",
-    "highlightsQuery": "tree-sitter-hcl/highlights.scm",
-    "foldsQuery": "tree-sitter-hcl/folds.scm",
-    "indentsQuery": "tree-sitter-hcl/indents.scm",
-    "tagsQuery": "tree-sitter-hcl/tags.scm"
+    "grammar": "hcl.wasm",
+    "highlightsQuery": "hcl-highlights.scm",
+    "foldsQuery": "hcl-folds.scm",
+    "indentsQuery": "hcl-indents.scm",
+    "tagsQuery": "hcl-tags.scm"
   }
 }
