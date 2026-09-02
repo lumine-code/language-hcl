@@ -13,7 +13,7 @@
     // upstream repository, so it is a separate parser and needs its own wasm;
     // one shared build would install one over the other.
     "parserSource": "github:MichaHoffmann/tree-sitter-hcl/dialects/terraform#v1.2.0",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "terraform.wasm",
     "highlightsQuery": ["terraform-hcl-highlights.scm", "terraform-highlights.scm"],
     "foldsQuery": "terraform-folds.scm",
