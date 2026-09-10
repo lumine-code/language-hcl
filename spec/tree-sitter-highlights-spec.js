@@ -146,7 +146,9 @@ describe("HCL Tree-sitter highlights", () => {
 
   it("keeps unbounded block contexts leaf-rooted in both base queries", () => {
     for (const variant of VARIANTS) {
-      const query = fs.readFileSync(path.join(__dirname, "..", "grammars", variant.query), "utf8");
+      const query = fs
+        .readFileSync(path.join(__dirname, "..", "grammars", variant.query), "utf8")
+        .replaceAll("\r\n", "\n");
       expect(query).toContain(
         `((identifier) @keyword.control.${variant.suffix}\n  (#is? test.childOfType block))`,
       );
