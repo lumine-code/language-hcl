@@ -78,7 +78,8 @@
 
 (null_lit) @constant.other.hcl
 
-(comment) @comment.line.hcl @_IGNORE_.spell
+((comment) @comment.line.hcl @_IGNORE_.spell
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 
 (identifier) @variable.other.hcl
 
@@ -86,6 +87,7 @@
   (#is? test.childOfType block))
 
 ((identifier) @support.type.hcl
+  (#is? test.childOfType block)
   (#is? test.typeAt "parent.parent.parent block"))
 
 (function_call

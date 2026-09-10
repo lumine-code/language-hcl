@@ -83,7 +83,8 @@
 
 (null_lit) @constant.other.terraform
 
-(comment) @comment.line.terraform @_IGNORE_.spell
+((comment) @comment.line.terraform @_IGNORE_.spell
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 
 (identifier) @variable.other.terraform
 
@@ -91,6 +92,7 @@
   (#is? test.childOfType block))
 
 ((identifier) @support.type.terraform
+  (#is? test.childOfType block)
   (#is? test.typeAt "parent.parent.parent block"))
 
 (function_call
