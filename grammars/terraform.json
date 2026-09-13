@@ -3,7 +3,7 @@
   "scopeName": "source.terraform",
   "type": "tree-sitter",
   "parser": "tree-sitter-terraform",
-  "injectionNames": ["terraform", "tf"],
+  "injectionNames": ["terraform", "opentofu", "tf"],
   "fileTypes": ["tf", "tfvars"],
   "comments": {
     "start": "# "
