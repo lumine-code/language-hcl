@@ -51,8 +51,7 @@ describe("HCL Tree-sitter highlights", () => {
     return editor.scopeDescriptorForBufferPosition(point).getScopesArray();
   }
 
-  function rawCaptures(startRow, endRow) {
-    const layer = languageMode.rootLanguageLayer;
+  async function rawCaptures(startRow, endRow) {
     const options =
       startRow == null
         ? undefined
@@ -60,7 +59,8 @@ describe("HCL Tree-sitter highlights", () => {
             startPosition: new Point(startRow, 0),
             endPosition: new Point(endRow, 0),
           };
-    return layer.queries.highlightsQuery.captures(layer.tree.rootNode, options);
+    const groups = await editor.getGrammarQueryCaptureGroups("highlightsQuery", options);
+    return groups.find(({ grammar }) => grammar === editor.getGrammar())?.captures ?? [];
   }
 
   for (const variant of VARIANTS) {
@@ -110,7 +110,7 @@ describe("HCL Tree-sitter highlights", () => {
           ].join("\n"),
         );
 
-        const captures = rawCaptures(3, 4).filter(
+        const captures = (await rawCaptures(3, 4)).filter(
           (capture) =>
             capture.name === `keyword.control.${variant.suffix}` ||
             capture.name === `support.type.${variant.suffix}`,
@@ -132,7 +132,7 @@ describe("HCL Tree-sitter highlights", () => {
         lines.push("}");
         await setUp(variant, lines.join("\r\n"));
 
-        const captures = rawCaptures(3000, 3006);
+        const captures = await rawCaptures(3000, 3006);
         expect(captures.length).toBeLessThanOrEqual(variant.suffix === "hcl" ? 90 : 100);
         expect(
           captures.every(
