@@ -16,6 +16,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "hcl.wasm",
     "highlightsQuery": "hcl-highlights.scm",
+    "injectionsQuery": "hcl-injections.scm",
     "foldsQuery": "hcl-folds.scm",
     "indentsQuery": "hcl-indents.scm",
     "tagsQuery": "hcl-tags.scm"

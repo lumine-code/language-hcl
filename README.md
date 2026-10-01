@@ -14,10 +14,10 @@ HCL and Terraform language support.
 
 To install `language-hcl` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-hcl`.
 
-## Services
+## Injections
 
-- `hyperlink.injection`: consumed to highlight URLs in these files as clickable links.
-- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
+- Static Tree-sitter injections highlight URLs with `language-hyperlink`.
+- Static Tree-sitter injections highlight comment markers with `language-todo`.
 
 ## Contributing
 
