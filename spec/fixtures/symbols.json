@@ -1,0 +1,36 @@
+{
+  "source.hcl": {
+    "text": "service \"main\" { enabled = true }\nbackend \"database\" \"primary\" { port = 5432 }",
+    "symbols": [
+      {
+        "name": "main",
+        "tag": "module"
+      },
+      {
+        "name": "database.primary",
+        "tag": "module"
+      }
+    ],
+    "absent": ["service", "backend", "enabled", "port"],
+    "only": true
+  },
+  "source.terraform": {
+    "text": "resource \"aws_instance\" \"web\" { ami = \"image\" }\nmodule \"network\" { source = \"./network\" }\nlocals { enabled = true }",
+    "symbols": [
+      {
+        "name": "aws_instance.web",
+        "tag": "module"
+      },
+      {
+        "name": "network",
+        "tag": "module"
+      },
+      {
+        "name": "locals",
+        "tag": "module"
+      }
+    ],
+    "absent": ["resource", "module", "image"],
+    "only": true
+  }
+}
