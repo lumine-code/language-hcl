@@ -4,7 +4,7 @@
   "type": "tree-sitter",
   "parser": "tree-sitter-terraform",
   "injectionNames": ["terraform", "opentofu", "tf"],
-  "fileTypes": ["tf", "tfvars"],
+  "fileTypes": ["tf", "tfvars", "tofu"],
   "comments": {
     "start": "# "
   },

@@ -6,7 +6,7 @@ HCL and Terraform language support.
 
 - **Grammars**: provides Tree-sitter grammars, built from [tree-sitter-hcl](https://github.com/MichaHoffmann/tree-sitter-hcl).
 - **Syntax highlighting**: blocks, attributes, template interpolation and the splat operators, for both HCL and its Terraform dialect.
-- **Dialects**: separate grammars for `.hcl`/`.nomad` and `.tf`/`.tfvars`, so Terraform's own references are recognised.
+- **Dialects**: separate grammars for `.hcl`/`.nomad` and `.tf`/`.tfvars`/`.tofu`, so Terraform and OpenTofu references are recognised.
 - **Folding**: folds blocks, objects and heredocs.
 - **Symbol navigation**: block labels, which are what a reference targets.
 

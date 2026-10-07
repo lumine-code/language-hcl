@@ -10,10 +10,12 @@
   "description": "HCL and Terraform language support.",
   "keywords": [
     "terraform",
+    "tofu",
     "nomad",
     "packer",
     "configuration",
-    "infrastructure"
+    "infrastructure",
+    "tree-sitter"
   ],
   "repository": "https://github.com/lumine-code/language-hcl",
   "bugs": {
