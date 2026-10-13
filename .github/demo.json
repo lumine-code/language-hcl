@@ -1,0 +1,16 @@
+{
+  "title": "language-hcl",
+  "description": "HCL syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "cb08a734918cb3aa0fef399d5fb43cabc51877a7",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "HCL syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 360
+    }
+  ]
+}
