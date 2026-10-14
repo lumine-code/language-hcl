@@ -1,16 +1,61 @@
 {
   "title": "language-hcl",
-  "description": "HCL syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "cb08a734918cb3aa0fef399d5fb43cabc51877a7",
+  "description": "HCL syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "3fc023d25768d65d7b408882b70974d18e7d6c37",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "76919138037be21b7b3a883e4047829dac18f96eaaf58fc4c96bfe2f4586dc8d",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 360 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
+      "dirty": true,
+      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+    },
+    "package": {
+      "revision": "3fc023d25768d65d7b408882b70974d18e7d6c37",
+      "dirty": true,
+      "workingTreeHash": "fbe20f4df15eb94799dd65bc41e074a9b248d4119b9d03a08615b87189184733"
+    },
+    "language-hcl": {
+      "revision": "3fc023d25768d65d7b408882b70974d18e7d6c37",
+      "dirty": true,
+      "workingTreeHash": "fbe20f4df15eb94799dd65bc41e074a9b248d4119b9d03a08615b87189184733"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "50ec2f83a6347dd8113870992ec4eb2be4014f3d9e12213c2f51b543f1eca793"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.hcl",
+      "sha256": "a030c147670219a2f60d562726a11f9b057f59d8d9aabd3502ac7bfeb223cdea"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "HCL syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 360
+      "height": 360,
+      "sha256": "8857aa2a724fd08b412e13355a75872f8d9cb5dfbfe02bb022daf01fcdaa67c8"
     }
   ]
 }
