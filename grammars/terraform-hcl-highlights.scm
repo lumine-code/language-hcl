@@ -84,7 +84,10 @@
 (null_lit) @constant.other.terraform
 
 ((comment) @comment.line.terraform @_IGNORE_.spell
+  (#match? @comment.line.terraform "^(#|//)")
   (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
+((comment) @comment.block.terraform @_IGNORE_.spell
+  (#match? @comment.block.terraform "^/\\*"))
 
 (identifier) @variable.other.terraform
 

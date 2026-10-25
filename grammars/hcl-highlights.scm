@@ -79,7 +79,10 @@
 (null_lit) @constant.other.hcl
 
 ((comment) @comment.line.hcl @_IGNORE_.spell
+  (#match? @comment.line.hcl "^(#|//)")
   (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
+((comment) @comment.block.hcl @_IGNORE_.spell
+  (#match? @comment.block.hcl "^/\\*"))
 
 (identifier) @variable.other.hcl
 
