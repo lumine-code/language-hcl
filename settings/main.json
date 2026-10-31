@@ -1,10 +1,15 @@
 {
-  ".source.hcl": {
+  ".source.hcl, .source.terraform": {
     "bracket-matcher": {
-      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"]
+      "autocompleteCharacters": ["()", "[]", "{}", "\"\""]
     },
     "editor": {
-      "commentStart": "# "
+      "commentStart": "# ",
+      "commentDelimiters": {
+        "line": "#",
+        "block": ["/*", "*/"]
+      },
+      "nonWordCharacters": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…"
     }
   }
 }
