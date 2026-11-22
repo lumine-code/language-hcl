@@ -18,6 +18,7 @@
     "highlightsQuery": ["terraform-hcl-highlights.scm", "terraform-highlights.scm"],
     "foldsQuery": "terraform-folds.scm",
     "indentsQuery": "terraform-indents.scm",
+    "tagsQuerySupportsLocalPath": true,
     "tagsQuery": "terraform-tags.scm"
   }
 }

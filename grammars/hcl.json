@@ -19,6 +19,7 @@
     "injectionsQuery": "hcl-injections.scm",
     "foldsQuery": "hcl-folds.scm",
     "indentsQuery": "hcl-indents.scm",
+    "tagsQuerySupportsLocalPath": true,
     "tagsQuery": "hcl-tags.scm"
   }
 }
